@@ -228,8 +228,8 @@ function updateChart(done, remaining) {
     let chartLabels = ['Completed', 'Remaining'];
 
     if (done === 0 && remaining === 0) {
-        chartData = [1]; // Grafiğin tam bir daire olması için sembolik 1 değeri
-        chartColors = ['rgba(255, 255, 255, 0.1)']; // Şık, yarı saydam bir gri
+        chartData = [1]; 
+        chartColors = ['rgba(255, 255, 255, 0.1)']; 
         chartLabels = ['No Tasks'];
     }
 
@@ -254,7 +254,7 @@ function updateChart(done, remaining) {
                 tooltip: {
                     callbacks: {
                         label: function(context) {
-                            if (context.label === 'No Tasks') return ' Henüz görev eklenmedi';
+                            if (context.label === 'No Tasks') return ' No tasks have been added yet.';
                             return ' ' + context.label + ': ' + context.raw;
                         }
                     }
