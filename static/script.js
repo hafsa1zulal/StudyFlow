@@ -39,7 +39,7 @@ async function addTask(){
     let taskValue = input.value.trim();
 
     if(taskValue === ""){
-        alert("Task boş olamaz");
+        alert("Task cannot be empty");
         return;
     }
 
@@ -54,7 +54,7 @@ async function addTask(){
         closeModal();
         loadTasks();
     } catch (error) {
-        console.error("Görev eklenirken hata oluştu:", error);
+        console.error("An error occurred while adding the task:", error);
     }
 }
 
